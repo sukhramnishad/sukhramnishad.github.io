@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
+        .lang-hi { display: none; }
         .marquee { overflow: hidden; white-space: nowrap; background: #ef4444; color: white; padding: 10px 0; font-weight: bold; position: sticky; top: 0; z-index: 110; }
         .marquee-content { display: inline-block; animation: marquee 15s linear infinite; }
         @keyframes marquee { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
@@ -17,90 +18,99 @@
 
     <div class="marquee">
         <div class="marquee-content">
-            ⚠️ ध्यान दें: पेमेंट के तुरंत बाद काम शुरू होगा! | Pay Now & Start Work Instantly! No Waiting Time. ⚠️
+            ⚠️ <span class="lang-en">Pay Now & Start Work Instantly! No Waiting Time.</span><span class="lang-hi">पेमेंट के तुरंत बाद काम शुरू होगा! इंतज़ार करने की ज़रूरत नहीं।</span> ⚠️
         </div>
     </div>
 
-    <nav class="sticky top-[44px] bg-indigo-900 text-white p-4 z-100 shadow-xl">
+    <nav class="sticky top-[44px] bg-indigo-900 text-white p-4 z-50 shadow-xl">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <h1 class="font-black text-xl tracking-tighter uppercase">Sukhram Nishad</h1>
-            <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+            <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest">
                 <a href="#home" class="hover:text-yellow-400">Home</a>
                 <a href="#plans" class="hover:text-yellow-400">Plans</a>
                 <a href="#policies" class="hover:text-yellow-400">Policies</a>
-                <a href="tel:9030825816" class="bg-yellow-400 text-black px-3 py-1 rounded">Call Support</a>
+                <a href="tel:9030825816" class="bg-indigo-700 px-3 py-1 rounded border border-indigo-400">Call</a>
             </div>
-            <button class="bg-indigo-700 px-4 py-1 rounded-full border border-indigo-400 text-[10px] font-bold">LOGIN / SIGN UP</button>
+            <button onclick="toggleLang()" id="lBtn" class="bg-yellow-400 text-black px-4 py-1 rounded-full text-[10px] font-black uppercase shadow-lg">हिन्दी वर्जन</button>
         </div>
     </nav>
 
-    <header id="home" class="py-20 text-center bg-white border-b px-4">
-        <h2 class="text-5xl font-black text-slate-800 tracking-tight mb-4">Professional Web Agency</h2>
-        <p class="text-indigo-600 font-bold text-xl italic underline decoration-yellow-400">Jaijaipur's Trusted Digital Partner</p>
+    <header id="home" class="py-16 text-center bg-white border-b px-4">
+        <div class="lang-en">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight">Professional Web Agency</h2>
+            <p class="text-indigo-600 mt-4 font-bold text-lg italic underline decoration-yellow-400">Jaijaipur's Trusted Digital Partner</p>
+        </div>
+        <div class="lang-hi">
+            <h2 class="text-4xl md:text-5xl font-black text-slate-800 tracking-tight">प्रोफेशनल वेब एजेंसी</h2>
+            <p class="text-indigo-600 mt-4 font-bold text-lg italic underline decoration-yellow-400">जयजयपुर का विश्वसनीय डिजिटल पार्टनर</p>
+        </div>
     </header>
 
-    <section id="plans" class="max-w-7xl mx-auto p-8">
-        <h3 class="text-2xl font-black mb-8 border-b-2 border-indigo-900 inline-block uppercase">Our Plans</h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-yellow-400 p-6 rounded-3xl border-4 border-black shadow-2xl">
+    <section id="plans" class="max-w-7xl mx-auto p-6">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <div class="bg-yellow-400 p-6 rounded-3xl border-4 border-black shadow-xl">
                 <h3 class="font-black text-xl italic">⚡ FLASH</h3>
-                <p class="text-4xl font-black my-4">₹3,500</p>
-                <p class="text-[10px] font-bold uppercase mb-4">Delivery: 1-2 Hours</p>
-                <button class="w-full bg-black text-white py-3 rounded-xl font-bold uppercase text-xs">Upcoming Service</button>
+                <p class="text-4xl font-black my-4 font-mono">₹3,500</p>
+                <p class="text-[10px] font-bold uppercase mb-4"><span class="lang-en">Delivery: 1-2 Hours</span><span class="lang-hi">डिलिवरी: 1-2 घंटे</span></p>
+                <button class="w-full bg-black text-white py-2 rounded-xl font-bold uppercase text-[10px]"><span class="lang-en">Upcoming Service</span><span class="lang-hi">जल्द आ रहा है</span></button>
             </div>
-            <div class="bg-indigo-600 text-white p-6 rounded-3xl shadow-2xl">
+
+            <div class="bg-indigo-600 text-white p-6 rounded-3xl shadow-xl">
                 <h3 class="font-black text-xl italic text-yellow-300">🚀 ROCKET</h3>
-                <p class="text-4xl font-black my-4">₹2,000</p>
-                <p class="text-[10px] font-bold uppercase mb-4">Delivery: 6 Hours</p>
-                <button class="w-full bg-yellow-400 text-black py-3 rounded-xl font-bold uppercase text-xs">Upcoming Service</button>
+                <p class="text-4xl font-black my-4 font-mono">₹2,000</p>
+                <p class="text-[10px] font-bold uppercase mb-4"><span class="lang-en">Delivery: 6 Hours</span><span class="lang-hi">डिलिवरी: 6 घंटे</span></p>
+                <button class="w-full bg-yellow-400 text-black py-2 rounded-xl font-bold uppercase text-[10px]"><span class="lang-en">Upcoming Service</span><span class="lang-hi">जल्द आ रहा है</span></button>
             </div>
-            <div class="bg-white border-2 border-slate-200 p-6 rounded-3xl shadow-lg">
+
+            <div class="bg-white border-2 border-slate-200 p-6 rounded-3xl shadow-lg text-center">
                 <h3 class="font-bold text-xl text-indigo-600 italic">Superfast</h3>
-                <p class="text-4xl font-black my-4">₹2,500</p>
-                <p class="text-[10px] font-bold uppercase text-slate-500">Delivery: 24 Hours</p>
-                <a href="https://wa.me/919030825816?text=I%20want%20to%20order%20Superfast%20Plan" class="block mt-6 bg-indigo-600 text-white text-center py-3 rounded-xl font-bold text-xs uppercase">Pay & Start Work</a>
+                <p class="text-4xl font-black my-4 font-mono text-slate-800">₹2,500</p>
+                <p class="text-[10px] font-bold uppercase text-slate-500 mb-4"><span class="lang-en">Delivery: 24 Hours</span><span class="lang-hi">डिलिवरी: 24 घंटे</span></p>
+                <a href="https://wa.me/919030825816?text=I%20want%20to%20order%20Superfast%20Plan" class="block bg-indigo-600 text-white py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest"><span class="lang-en">Pay & Start Work</span><span class="lang-hi">भुगतान करें और शुरू करें</span></a>
             </div>
+
             <div class="bg-slate-100 p-6 rounded-3xl border-2 border-dashed border-slate-400 text-center">
                 <h3 class="font-bold text-lg text-slate-700 italic">Token Plan</h3>
-                <p class="text-4xl font-black my-4">₹9</p>
-                <p class="text-[10px] font-bold text-slate-500 uppercase">Book Your Slot</p>
-                <a href="https://wa.me/919030825816?text=I%20want%20to%20order%20Token%20Plan%20at%20Rs9" class="block mt-6 bg-slate-800 text-white text-center py-3 rounded-xl font-bold text-xs uppercase tracking-widest">Pay ₹9 Now</a>
+                <p class="text-4xl font-black my-4 font-mono">₹9</p>
+                <p class="text-[10px] font-bold text-slate-500 uppercase mb-4"><span class="lang-en">Total: ₹1,400 | 20 Days</span><span class="lang-hi">कुल: ₹1,400 | 20 दिन</span></p>
+                <a href="https://wa.me/919030825816?text=I%20want%20to%20order%20Token%20Plan%20at%20Rs9" class="block bg-slate-800 text-white py-3 rounded-xl font-bold text-[10px] uppercase tracking-widest"><span class="lang-en">Pay ₹9 Now</span><span class="lang-hi">₹9 अभी दें</span></a>
             </div>
+
             </div>
+
+        <div class="mt-12 p-6 bg-red-50 border-l-4 border-red-500 text-xs italic font-bold">
+            <span class="lang-en">**Notice:** Work will ONLY start after payment. Basic plans don't include Gateway.</span>
+            <span class="lang-hi">**सूचना:** काम केवल भुगतान के बाद शुरू होगा। बेसिक प्लान में गेटवे शामिल नहीं है।</span>
+        </div>
     </section>
 
-    <section id="policies" class="max-w-5xl mx-auto p-8 mt-20 border-t">
-        <h3 class="text-3xl font-black mb-10 text-indigo-900 uppercase">Legal Policies & Terms</h3>
+    <section id="policies" class="max-w-5xl mx-auto p-8 mt-10 border-t">
+        <h3 class="text-3xl font-black mb-8 text-indigo-900 uppercase">
+            <span class="lang-en">Legal Policies</span><span class="lang-hi">कानूनी नीतियां</span>
+        </h3>
         
         <div class="policy-box">
-            <h4 class="font-black text-lg mb-3 uppercase">1. Privacy Policy (गोपनीयता नीति)</h4>
+            <h4 class="font-black text-lg mb-2 uppercase"><span class="lang-en">1. Privacy Policy</span><span class="lang-hi">1. गोपनीयता नीति</span></h4>
             <p class="text-sm text-slate-600 leading-relaxed italic">
-                हम आपकी गोपनीयता का सम्मान करते हैं। आपके द्वारा प्रदान किया गया डेटा (जैसे नाम, ईमेल, और प्रोजेक्ट फाइलें) केवल आपकी वेबसाइट बनाने के उद्देश्य से उपयोग किया जाएगा। हम सुखराम निषाद सर्विसेज, जयजयपुर में यह सुनिश्चित करते हैं कि आपका डेटा किसी भी तीसरे पक्ष (Third Party) को बेचा या साझा नहीं किया जाएगा। आपका डेटा हमारे पास पूरी तरह सुरक्षित है।
+                <span class="lang-en">Your data is safe. We use it only for website creation and never share with 3rd parties.</span>
+                <span class="lang-hi">आपका डेटा सुरक्षित है। हम इसका उपयोग केवल वेबसाइट बनाने के लिए करते हैं और किसी के साथ साझा नहीं करते।</span>
             </p>
         </div>
 
         <div class="policy-box">
-            <h4 class="font-black text-lg mb-3 uppercase">2. Refund & Cancellation (रिफंड नीति)</h4>
+            <h4 class="font-black text-lg mb-2 uppercase"><span class="lang-en">2. Refund Policy</span><span class="lang-hi">2. रिफंड नीति</span></h4>
             <p class="text-sm text-slate-600 leading-relaxed italic">
-                <strong>टोकन राशि:</strong> ₹9, ₹100, और ₹200 की टोकन राशि किसी भी स्थिति में वापस (Non-Refundable) नहीं की जाएगी। यह राशि आपका स्लॉट बुक करने और शुरुआती सेटअप के लिए ली जाती है।<br>
-                <strong>पूर्ण भुगतान:</strong> एक बार काम शुरू होने के बाद भुगतान वापस नहीं होगा। यदि ग्राहक प्रोजेक्ट के लिए आवश्यक जानकारी प्रदान करने में देरी करता है, तो हम रिफंड के लिए उत्तरदायी नहीं होंगे।
+                <span class="lang-en">Token money (₹9, ₹100, ₹200) is non-refundable. No refund once work starts.</span>
+                <span class="lang-hi">टोकन राशि (₹9, ₹100, ₹200) वापस नहीं होगी। काम शुरू होने के बाद रिफंड संभव नहीं है।</span>
             </p>
         </div>
 
         <div class="policy-box">
-            <h4 class="font-black text-lg mb-3 uppercase">3. Shipping & Delivery (डिलिवरी नीति)</h4>
+            <h4 class="font-black text-lg mb-2 uppercase"><span class="lang-en">3. Delivery Policy</span><span class="lang-hi">3. डिलिवरी नीति</span></h4>
             <p class="text-sm text-slate-600 leading-relaxed italic">
-                चूंकि हमारी सेवाएं डिजिटल हैं, इसलिए कोई भौतिक शिपिंग शामिल नहीं है। <br>
-                <strong>समय सीमा:</strong> काम की समय सीमा (Timeline) तभी शुरू होगी जब हमें सफल भुगतान और प्रोजेक्ट से संबंधित सभी डेटा (लोगो, टेक्स्ट, फोटो) मिल जाएंगे। डिलीवरी आपके पंजीकृत व्हाट्सएप नंबर या ईमेल पर फाइल/लिंक के रूप में की जाएगी।
-            </p>
-        </div>
-
-        <div class="policy-box">
-            <h4 class="font-black text-lg mb-3 uppercase">4. Terms & Conditions (नियम और शर्तें)</h4>
-            <p class="text-sm text-slate-600 leading-relaxed italic">
-                - हम केवल भुगतान की पुष्टि के बाद ही काम शुरू करते हैं। <br>
-                - हमारे बेसिक और स्टैंडर्ड प्लान्स में 'पेमेंट गेटवे' इंटीग्रेशन शामिल नहीं है। <br>
-                - सभी विवाद जयजयपुर, छत्तीसगढ़ अधिकार क्षेत्र के अधीन होंगे।
+                <span class="lang-en">Delivery timeline starts after full payment and data submission.</span>
+                <span class="lang-hi">डिलिवरी का समय पूर्ण भुगतान और डेटा मिलने के बाद ही शुरू होता है।</span>
             </p>
         </div>
     </section>
@@ -109,19 +119,26 @@
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
                 <h3 class="text-yellow-400 font-bold text-xl mb-4 uppercase italic">Sukhram Nishad Agency</h3>
-                <p class="text-sm text-slate-300 italic">Address: Jaijaipur, Chhattisgarh - 495690</p>
+                <p class="text-sm text-slate-300 italic">Jaijaipur, Chhattisgarh - 495690</p>
                 <p class="text-sm text-slate-300 italic mt-2">Email: Sknishad3488@gmail.com</p>
             </div>
             <div class="md:text-right">
-                <h3 class="text-yellow-400 font-bold mb-4 uppercase">Call for Instant Help</h3>
+                <h3 class="text-yellow-400 font-bold mb-4 uppercase"><span class="lang-en">Call Now</span><span class="lang-hi">अभी कॉल करें</span></h3>
                 <a href="tel:9030825816" class="text-3xl font-black underline decoration-yellow-400">9203625816</a>
-                <p class="text-[10px] mt-4 text-slate-400 italic">कॉल करने के लिए नंबर पर क्लिक करें</p>
+                <p class="text-[10px] mt-4 text-slate-400 italic">Click number to dial old contact</p>
             </div>
-        </div>
-        <div class="text-center mt-12 pt-8 border-t border-indigo-900 text-[10px] text-slate-500">
-            © 2026 SUKHRAM NISHAD SERVICES | ALL RIGHTS RESERVED
         </div>
     </footer>
 
+    <script>
+        function toggleLang() {
+            const h = document.querySelectorAll('.lang-hi'), e = document.querySelectorAll('.lang-en'), b = document.getElementById('lBtn');
+            if(b.innerText === "हिन्दी वर्जन"){
+                h.forEach(x => x.style.display='inline-block'); e.forEach(x => x.style.display='none'); b.innerText="English Version";
+            } else {
+                h.forEach(x => x.style.display='none'); e.forEach(x => x.style.display='inline-block'); b.innerText="हिन्दी वर्जन";
+            }
+        }
+    </script>
 </body>
 </html>
