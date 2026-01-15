@@ -3,75 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sukhram Nishad - Web Development</title>
+    <title>Sukhram Nishad - Web Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* अब डिफ़ॉल्ट में हिन्दी छिपी रहेगी */
-        .lang-hi { display: none; }
+        .lang-hi { display: none; } /* हिन्दी शुरू में छिपी रहेगी */
     </style>
 </head>
 <body class="bg-slate-50 font-sans">
+
     <nav class="bg-indigo-900 text-white p-4 sticky top-0 z-50 flex justify-between items-center">
-        <h1 class="font-bold">SUKHRAM NISHAD</h1>
-        <button onclick="toggleLang()" id="lBtn" class="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-bold">हिन्दी</button>
+        <h1 class="font-bold tracking-tighter text-xl">SUKHRAM NISHAD</h1>
+        <button onclick="toggleLang()" id="lBtn" class="bg-yellow-400 text-black px-4 py-1 rounded-full text-xs font-bold shadow-lg">हिन्दी वर्जन</button>
     </nav>
 
     <header class="py-12 text-center bg-white border-b px-4">
         <div class="lang-en">
-            <h2 class="text-3xl font-black">Website Development Services</h2>
-            <p class="text-slate-500">Fast Delivery & Premium Designs</p>
+            <h2 class="text-3xl font-black text-slate-800">Professional Website Development</h2>
+            <p class="text-slate-500 mt-2">Affordable Prices & Superfast Delivery</p>
         </div>
         <div class="lang-hi">
-            <h2 class="text-3xl font-black">वेबसाइट डेवलपमेंट सर्विसेज</h2>
-            <p class="text-slate-500">तेज़ डिलीवरी और बेहतरीन डिज़ाइन</p>
+            <h2 class="text-3xl font-black text-slate-800">प्रोफेशनल वेबसाइट डेवलपमेंट</h2>
+            <p class="text-slate-500 mt-2">किफायती दाम और सुपरफास्ट डिलीवरी</p>
         </div>
     </header>
 
     <div class="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-yellow-400 p-6 rounded-2xl border-2 border-black">
-            <h3 class="font-black text-xl italic">⚡ FLASH</h3>
-            <p class="text-4xl font-black my-4">₹3,500</p>
-            <p class="lang-en font-bold text-sm text-red-700 underline">Delivery: 1-2 Hours</p>
-            <p class="lang-hi font-bold text-sm text-red-700 underline">डिलीवरी: 1-2 घंटे</p>
+        
+        <div class="bg-yellow-400 p-6 rounded-2xl border-2 border-black shadow-xl">
+            <h3 class="font-black text-2xl italic text-black">⚡ FLASH</h3>
+            <p class="text-4xl font-black my-4 text-black">₹3,500</p>
+            <div class="lang-en text-sm font-bold">Delivery: 1-2 Hours</div>
+            <div class="lang-hi text-sm font-bold">डिलीवरी: 1-2 घंटे</div>
         </div>
-        <div class="bg-indigo-600 text-white p-6 rounded-2xl">
-            <h3 class="font-black text-xl italic">🚀 ROCKET</h3>
-            <p class="text-4xl font-black my-4">₹2,000</p>
-            <p class="lang-en text-sm">Delivery: 6 Hours</p>
-            <p class="lang-hi text-sm">डिलीवरी: 6 घंटे</p>
+
+        <div class="bg-indigo-600 text-white p-6 rounded-2xl shadow-xl">
+            <h3 class="font-black text-2xl italic text-yellow-300">🚀 ROCKET</h3>
+            <p class="text-4xl font-black my-4 text-white">₹2,000</p>
+            <div class="lang-en text-sm">Delivery: 6 Hours</div>
+            <div class="lang-hi text-sm">डिलीवरी: 6 घंटे</div>
         </div>
-        <div class="bg-white border-2 border-slate-200 p-6 rounded-2xl">
-            <h3 class="font-bold text-xl text-green-600">📅 TOKEN</h3>
-            <p class="text-3xl font-black my-4 text-slate-800">₹9</p>
-            <p class="lang-en text-xs">Total: ₹1,400 (20 Days)</p>
-            <p class="lang-hi text-xs">कुल: ₹1,400 (20 दिन में)</p>
+
+        <div class="bg-white border-2 border-slate-200 p-6 rounded-2xl shadow-md">
+            <h3 class="font-bold text-xl text-slate-800 italic">Superfast</h3>
+            <p class="text-3xl font-black my-4 text-indigo-600">₹2,500</p>
+            <div class="lang-en text-sm">Within 24 Hours</div>
+            <div class="lang-hi text-sm">24 घंटे के भीतर</div>
         </div>
+
+        <div class="bg-slate-100 p-6 rounded-2xl border border-slate-300 text-center">
+            <h3 class="font-bold text-xl text-slate-700">📅 TOKEN</h3>
+            <p class="text-2xl font-black my-2">₹9</p>
+            <div class="lang-en text-xs italic">Total: ₹1,400 (20 Days)</div>
+            <div class="lang-hi text-xs italic">कुल खर्च: ₹1,400 (20 दिन में)</div>
+        </div>
+
+        <div class="bg-green-50 p-6 rounded-2xl border-2 border-green-200 text-center">
+            <h3 class="font-bold text-xl text-green-700">🌟 SUPER</h3>
+            <p class="text-3xl font-black my-2 text-green-600">₹100</p>
+            <div class="lang-en text-xs">Timeline: 200 Days</div>
+            <div class="lang-hi text-xs">समय सीमा: 200 दिन</div>
+        </div>
+
+        <div class="bg-white border p-6 rounded-2xl shadow-sm border-slate-200">
+            <h3 class="font-bold text-lg text-slate-800">Regular / Fast</h3>
+            <div class="lang-en mt-2">
+                <p class="text-sm">In 3 Days: <b>₹1,000</b></p>
+                <p class="text-sm">10-20 Days: <b>₹1,200</b></p>
+            </div>
+            <div class="lang-hi mt-2">
+                <p class="text-sm">3 दिन में: <b>₹1,000</b></p>
+                <p class="text-sm">10-20 दिन में: <b>₹1,200</b></p>
+            </div>
+        </div>
+
     </div>
 
-    <footer class="bg-slate-900 text-white mt-20 p-10 text-sm">
+    <footer class="bg-slate-900 text-white mt-12 p-10 text-sm">
         <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-                <h4 class="font-bold text-yellow-400 mb-4">Contact</h4>
-                <p>Location: India</p>
+                <h4 class="font-bold text-yellow-400 mb-4 uppercase tracking-widest">Contact Information</h4>
                 <p>Email: nishadsukhram@gmail.com</p>
+                <p>Location: India</p>
             </div>
             <div>
-                <h4 class="font-bold text-yellow-400 mb-4">Policies</h4>
-                <p class="mb-2">Privacy Policy | Terms & Conditions</p>
-                <p>Refund Policy: No refund after activation of domain/hosting.</p>
+                <h4 class="font-bold text-yellow-400 mb-4 uppercase tracking-widest">Policies</h4>
+                <p class="mb-2">Privacy Policy | Terms of Service</p>
+                <p class="text-slate-400">Refund Policy: No refund after service activation.</p>
             </div>
         </div>
-        <p class="text-center mt-10 text-slate-500 border-t border-slate-800 pt-6">© 2026 Sukhram Nishad</p>
+        <p class="text-center mt-10 text-slate-500 border-t border-slate-800 pt-6">© 2026 Sukhram Nishad. All Rights Reserved.</p>
     </footer>
 
     <script>
         function toggleLang() {
-            const h = document.querySelectorAll('.lang-hi'), e = document.querySelectorAll('.lang-en'), b = document.getElementById('lBtn');
-            // टॉगल लॉजिक को डिफॉल्ट इंग्लिश के हिसाब से सेट किया गया है
-            if(b.innerText === "हिन्दी"){
-                h.forEach(x => x.style.display='block'); e.forEach(x => x.style.display='none'); b.innerText="English";
+            const h = document.querySelectorAll('.lang-hi'), 
+                  e = document.querySelectorAll('.lang-en'), 
+                  b = document.getElementById('lBtn');
+            
+            if(b.innerText === "हिन्दी वर्जन"){
+                h.forEach(x => x.style.display='block'); 
+                e.forEach(x => x.style.display='none'); 
+                b.innerText="English Version";
             } else {
-                h.forEach(x => x.style.display='none'); e.forEach(x => x.style.display='block'); b.innerText="हिन्दी";
+                h.forEach(x => x.style.display='none'); 
+                e.forEach(x => x.style.display='block'); 
+                b.innerText="हिन्दी वर्जन";
             }
         }
     </script>
